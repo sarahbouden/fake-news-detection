@@ -29,47 +29,45 @@ fake-news-detection is a robust multi-agent system designed to automatically ide
 
 **Architecture:**
 
-Input → [Ingest] → [Claim Detection] → [Evidence Retrieval & Fact-Checking] → [Embedding & LLM Stance] → [Aggregation] → [Explainability] → Output
+    Input → [Ingest] → [Claim Detection] → [Evidence Retrieval & Fact-Checking] → [Embedding & LLM Stance] → [Aggregation] → [Explainability] → Output
 
 Multi-agent, modular, extensible design enabling parallel evaluation and transparent verdict generation.
 
 ## Components Explanation
-  */outputs/: Stores model outputs, verdicts, and explanations.​
+  * /outputs/: Stores model outputs, verdicts, and explanations.​
 
-  */scripts/: Contains utility scripts like app.py (main app), config.py (settings), nltk_download.py, and test scripts.​
+  * /scripts/: Contains utility scripts like app.py (main app), config.py (settings), nltk_download.py, and test scripts.​
 
-  */src/: Main source code containing agents, orchestration modules, LLM integrations, API schemas, config files, and unit tests.​
+  * /src/: Main source code containing agents, orchestration modules, LLM integrations, API schemas, config files, and unit tests.​
 
-    * agents/: Specialized agents (ingest_agent, claim_detection_agent, evidence_retrieval_agent, verdict_agent, aggregation_agent, explainability_agent, google_fact_check_agent, snopes_agent, claim_embedding_agent, llm_stance_agent).
+   * agents/: Specialized agents (ingest_agent, claim_detection_agent, evidence_retrieval_agent, verdict_agent, aggregation_agent, explainability_agent, google_fact_check_agent, snopes_agent, claim_embedding_agent, llm_stance_agent).
 
-    * orchestration/: workflow.py defines pipeline workflow, nodes.py & state_graph.py manage pipeline states and transitions.
+   * orchestration/: workflow.py defines pipeline workflow, nodes.py & state_graph.py manage pipeline states and transitions.
 
-    * llm/: LLM wrapper for Groq API, prompt management.
+   * llm/: LLM wrapper for Groq API, prompt management.
 
-    * api/: Schema definitions for API communication.
+   * api/: Schema definitions for API communication.
 
   * /templates/: Contains templates for setup and configuration files (app.py, config.py, requirements.txt).​
 
   * requirements.txt / requirements-deployment.txt: Lists Python package dependencies for development and deployment.
 
 ## Technologies Used
-Python: Base language for all components.
+ * Python: Base language for all components.
 
-Flask / FastAPI (if applicable): Web application framework for serving the model.
+ * Flask / FastAPI (if applicable): Web application framework for serving the model.
 
-NLTK: Used for natural language preprocessing.
+ * NLTK: Used for natural language preprocessing.
 
-Groq API: Large Language Model-based classification and reasoning.
+ * Groq API: Large Language Model-based classification and reasoning.
 
-External Fact Checking APIs:
+ * External Fact Checking APIs:
 
-Google Fact Check
+  * Google Fact Check
 
-Snopes API
+  * Snopes API
 
-Loguru: Logging and monitoring.
+ * JSON / YAML: Configuration and data interchange formats.
 
-JSON / YAML: Configuration and data interchange formats.
-
-Testing Tools: Unit test modules for robust validation.
+ * Testing Tools: Unit test modules for robust validation.
 
