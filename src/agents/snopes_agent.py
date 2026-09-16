@@ -25,7 +25,6 @@ class SnopesAgent:
     - Handles timeouts gracefully
     
     Rate Limit: None (web scraping)
-    Accuracy: 10/10 (highest credibility)
     Speed: 5-10 seconds
     Cost: FREE
     """
