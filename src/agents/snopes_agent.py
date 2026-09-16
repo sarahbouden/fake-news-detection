@@ -1,7 +1,7 @@
 """
 Snopes Fact Check Integration (Web Scraping)
 Searches Snopes database for fact-checked claims
-Accuracy: 10/10 | Speed: 5-10 seconds | Cost: FREE (unlimited)
+Speed: 5-10 seconds | Cost: FREE (unlimited)
 """
 
 from typing import List, Dict, Optional
